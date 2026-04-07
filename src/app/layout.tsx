@@ -45,6 +45,18 @@ export default function RootLayout({
       lang='en'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name='theme-color'
+          content='#111827'
+          media='(prefers-color-scheme: dark)'
+        />
+        <meta
+          name='theme-color'
+          content='#ffffff'
+          media='(prefers-color-scheme: light)'
+        />
+      </head>
       <body className='min-h-full flex flex-col antialiased'>
         <CartProvider>
           <div className='flex flex-col min-h-full'>{children}</div>
