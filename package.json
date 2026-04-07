@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "push": "git add -A && git commit -m \"$(date '+%Y-%m-%d %H:%M:%S') - Quick push\" && git push origin master",
+    "pushMsg": "bash -c 'git add -A && git commit -m \"$1\" && git push origin master' -- "
   },
   "dependencies": {
     "clsx": "2.1.1",

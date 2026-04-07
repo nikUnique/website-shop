@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
 
+import UmamiAnalytics from "./components/UmamiAnalytics";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,6 +49,7 @@ export default function RootLayout({
         <CartProvider>
           <div className='flex flex-col min-h-full'>{children}</div>
         </CartProvider>
+        <UmamiAnalytics />
       </body>
     </html>
   );
