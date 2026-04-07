@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Арабика Зерновой Кофе",
+    "price": 3500,
+    "unit": "упаковку 500г",
+    "category": "Кофе и Чай",
+    "description": "Отборные зерна 100% арабики средней обжарки. Насыщенный вкус с шоколадными нотами и легкой кислинкой.",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Лапша Рамен Пшеничная",
+    "price": 1200,
+    "unit": "упаковку 300г",
+    "category": "Лапша и Паста",
+    "description": "Традиционная японская лапша для рамена. Идеальна для приготовления аутентичного бульона с яйцом и овощами.",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Зеленый Чай Матча",
+    "price": 4800,
+    "unit": "упаковку 100г",
+    "category": "Кофе и Чай",
+    "description": "Японский порошковый чай матча церемониального качества. Богатый вкус умами и природная энергия.",
+    "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Паста Феттучине",
+    "price": 950,
+    "unit": "упаковку 500г",
+    "category": "Лапша и Паста",
+    "description": "Итальянская паста из твердых сортов пшеницы. Идеальна для сливочных соусов и классических блюд.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Кофе Молотый Эспрессо",
+    "price": 2800,
+    "unit": "упаковку 250г",
+    "category": "Кофе и Чай",
+    "description": "Классическая смесь для эспрессо тонкого помола. Крепкий насыщенный вкус с плотной пенкой крема.",
+    "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 6,
+    "name": "Удон Лапша",
+    "price": 1100,
+    "unit": "упаковку 400г",
+    "category": "Лапша и Паста",
+    "description": "Толстая пшеничная лапша для японских супов и жареных блюд. Нежная текстура и нейтральный вкус.",
+    "image": "https://images.unsplash.com/photo-1734529300659-e7c6cdc34efe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "active": true
+  },
+  {
+    "id": 7,
+    "name": "Чай Улун Молочный",
+    "price": 3200,
+    "unit": "упаковку 100г",
+    "category": "Кофе и Чай",
+    "description": "Тайваньский улун с нежным сливочным ароматом. Мягкий вкус с цветочными оттенками.",
+    "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 8,
+    "name": "Спагетти Классические",
+    "price": 850,
+    "unit": "упаковку 500г",
+    "category": "Лапша и Паста",
+    "description": "Традиционные итальянские спагетти из durum wheat. Отлично держат форму и идеально сочетаются с любыми соусами.",
+    "image": "https://images.unsplash.com/photo-1615584240522-7fe7ed4dadee?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "active": true
+  },
+  {
+    "id": 9,
+    "name": "Арабика Зерновой Кофе",
+    "price": 3500,
+    "unit": "упаковку 500г",
+    "category": "Кофе и Чай",
+    "description": "Отборные зерна 100% арабики средней обжарки. Насыщенный вкус с шоколадными нотами и легкой кислинкой.",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 10,
+    "name": "Лапша Рамен Пшеничная",
+    "price": 1200,
+    "unit": "упаковку 300г",
+    "category": "Лапша и Паста",
+    "description": "Традиционная японская лапша для рамена. Идеальна для приготовления аутентичного бульона с яйцом и овощами.",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 11,
+    "name": "Зеленый Чай Матча",
+    "price": 4800,
+    "unit": "упаковку 100г",
+    "category": "Кофе и Чай",
+    "description": "Японский порошковый чай матча церемониального качества. Богатый вкус умами и природная энергия.",
+    "image": "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "active": true
+  },
+  {
+    "id": 12,
+    "name": "Паста Феттучине",
+    "price": 950,
+    "unit": "упаковку 500г",
+    "category": "Лапша и Паста",
+    "description": "Итальянская паста из твердых сортов пшеницы. Идеальна для сливочных соусов и классических блюд.",
+    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 13,
+    "name": "Кофе Молотый Эспрессо",
+    "price": 2800,
+    "unit": "упаковку 250г",
+    "category": "Кофе и Чай",
+    "description": "Классическая смесь для эспрессо тонкого помола. Крепкий насыщенный вкус с плотной пенкой крема.",
+    "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  },
+  {
+    "id": 14,
+    "name": "Удон Лапша",
+    "price": 1100,
+    "unit": "упаковку 400г",
+    "category": "Лапша и Паста",
+    "description": "Толстая пшеничная лапша для японских супов и жареных блюд. Нежная текстура и нейтральный вкус.",
+    "image": "https://images.unsplash.com/photo-1734529300659-e7c6cdc34efe?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "active": true
+  },
+  {
+    "id": 15,
+    "name": "Чай Улун Молочный",
+    "price": 3200,
+    "unit": "упаковку 100г",
+    "category": "Кофе и Чай",
+    "description": "Тайваньский улун с нежным сливочным ароматом. Мягкий вкус с цветочными оттенками.",
+    "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=400&h=300&fit=crop&crop=faces",
+    "active": true
+  }
+]
