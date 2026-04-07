@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     description:
       "Кофе, чай, лапша, паста и другие продукты для быстрой и вкусной еды.",
   },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#111827" },
-  ],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  //   { media: "(prefers-color-scheme: dark)", color: "#111827" },
+  // ],
 };
 
 export default function RootLayout({
