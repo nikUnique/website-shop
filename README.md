@@ -8,7 +8,7 @@ A lightweight, static product catalog website for local food shops — built wit
 
 Small shop owners who sell by phone know the drill — the same questions, over and over, every single day:
 
-> *"What do you have today?" "How much is the...?" "Do you still have...?"*
+> _"What do you have today?" "How much is the...?" "Do you still have...?"_
 
 Every call interrupts work. Every repeated question is time that could be spent elsewhere. And at the end of the day, orders still get mixed up because nothing was written down.
 
@@ -42,12 +42,12 @@ If you need a fully self-managed solution, the next step would be adding an admi
 
 ## Stack
 
-| Layer | Technology |
-|---|---|
+| Layer    | Technology                             |
+| -------- | -------------------------------------- |
 | Frontend | Next.js (static export) + Tailwind CSS |
-| Products | `products.json` — just a file |
-| Hosting | Cloudflare Pages |
-| Cost | €0/month |
+| Products | `products.json` — just a file          |
+| Hosting  | Cloudflare Pages                       |
+| Cost     | €0/month                               |
 
 ---
 
@@ -63,7 +63,7 @@ If you need a fully self-managed solution, the next step would be adding an admi
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-username/shop-catalog
+git clone https://github.com/nikUnique/website-shop.git
 cd shop-catalog
 npm install
 npm run dev
@@ -84,7 +84,7 @@ Edit `data/products.json`:
       "id": "1",
       "name": "Stuffed Peppers",
       "category": "Ready Meals",
-      "price": 6.50,
+      "price": 6.5,
       "unit": "kg",
       "description": "Homemade, stuffed with rice and minced meat",
       "image": "/images/stuffed-peppers.jpg",
