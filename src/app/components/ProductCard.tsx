@@ -33,6 +33,7 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
     });
   };
 
+  // Just a comment
   return (
     <Link
       href={`/product/${product.id}`}
