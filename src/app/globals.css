@@ -38,8 +38,8 @@ html {
 
 /* ✅ Product card compositing layer */
 .product-card {
-  will-change: transform;
-  transform: translateZ(0);
+  content-visibility: auto;
+  contain-intrinsic-size: 300px;
 }
 
 /* ✅ Header performance fix - disable blur repaint on scroll */

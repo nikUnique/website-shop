@@ -62,7 +62,7 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
 
         {/* Content */}
         <div className='p-3 sm:p-5'>
-          <h3 className='text-sm sm:text-lg font-semibold text-zinc-900 mb-1 sm:mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors'>
+          <h3 className='text-sm sm:text-lg font-semibold text-zinc-900 mb-1 sm:mb-2 line-clamp-1 sm:line-clamp-2 group-hover:text-emerald-600 transition-colors'>
             {product.name}
           </h3>
 
