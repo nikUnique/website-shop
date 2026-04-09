@@ -45,9 +45,9 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
           <Image
             src={product.image}
             alt={product.name}
-            fill
-            sizes='25vw'
-            className='object-cover'
+            width={400}
+            height={400}
+            className='object-cover w-full h-full'
           />
 
           {/* Category Badge */}
