@@ -15,12 +15,13 @@ interface ProductDetailProps {
 }
 
 function formatPrice(price: number): string {
-  return new Intl.NumberFormat("ru-KZ", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "KZT",
+    currency: "USD",
     minimumFractionDigits: 0,
   }).format(price);
 }
+
 
 export default function ProductDetail({ product }: ProductDetailProps) {
   const { addToCart } = useCart();
@@ -41,7 +42,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
       <SiteHeader showCart />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <Breadcrumb links={[{ label: "Каталог", href: "/" }]} current={product.name} />
+        <Breadcrumb links={[{ label: "Catalog", href: "/" }]} current={product.name} />
       </div>
 
       <main className="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
@@ -65,7 +66,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           <div className="mb-8">
             <div className="flex items-baseline gap-2">
               <span className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">{formatPrice(product.price)}</span>
-              <span className="text-lg text-zinc-400 dark:text-zinc-500">за {product.unit}</span>
+              <span className="text-lg text-zinc-400 dark:text-zinc-500">per {product.unit}</span>
             </div>
           </div>
 
@@ -74,7 +75,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 text-white text-lg font-semibold hover:bg-emerald-600 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02]"
           >
             <ShoppingCart className="w-6 h-6" />
-            Добавить в корзину
+            Add to cart
           </button>
 
           <div className="mt-10 pt-8 border-t border-zinc-200 dark:border-zinc-800">
@@ -84,8 +85,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                   <Check className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Качество</p>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400">Премиум сорт</p>
+                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Quality</p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400">Premium grade</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
@@ -93,8 +94,8 @@ export default function ProductDetail({ product }: ProductDetailProps) {
                   <Clock className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Срок хранения</p>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400">До 12 месяцев</p>
+                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-50">Shelf life</p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400">Up to 12 months</p>
                 </div>
               </div>
             </div>

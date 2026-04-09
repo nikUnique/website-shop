@@ -7,32 +7,32 @@ import SiteHeader from "../components/SiteHeader";
 const steps = [
   {
     step: "1",
-    title: "Выберите товары",
-    description: "Добавьте нужные товары в корзину на нашем сайте",
+    title: "Select products",
+    description: "Add items you need to your cart on our website",
   },
   {
     step: "2",
-    title: "Оформите заказ",
+    title: "Place your order",
     description:
-      "Нажмите «Заказать через WhatsApp» — мы забронируем товары для вас",
+      "Click «Order via WhatsApp» — we will reserve items for you",
   },
   {
     step: "3",
-    title: "Получите подтверждение",
-    description: "Мы свяжемся с вами для подтверждения готовности заказа",
+    title: "Get confirmation",
+    description: "We will contact you to confirm your order is ready",
   },
   {
     step: "4",
-    title: "Заберите заказ",
-    description: "Приходите в магазин с номером заказа и заберите покупку",
+    title: "Pick up your order",
+    description: "Come to the store with your order number and collect your purchase",
   },
 ] as const;
 
 const importantInfo = [
-  "Заказ хранится в течение 24 часов после подтверждения",
-  "При получении необходимо предъявить номер заказа",
-  "Оплата производится при получении в магазине",
-  "Мы принимаем наличные и банковские карты",
+  "Order is held for 24 hours after confirmation",
+  "Order number is required for pickup",
+  "Payment is made at the store when picking up",
+  "We accept cash and bank cards",
 ] as const;
 
 export default function DeliveryPage() {
@@ -42,21 +42,21 @@ export default function DeliveryPage() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
         <Breadcrumb
-          links={[{ label: "Каталог", href: "/" }]}
-          current='Самовывоз и получение заказа'
+          links={[{ label: "Catalog", href: "/" }]}
+          current='Store pickup & order collection'
         />
       </div>
 
       <main className='flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16'>
         <SectionHeader
-          title='Самовывоз и получение заказа'
-          subtitle='Оформите заказ на сайте и заберите в магазине'
+          title='Store pickup & order collection'
+          subtitle='Place your order online and pick up at the store'
         />
 
         <div className='space-y-8'>
           <Card>
             <h2 className='text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-6'>
-              Как оформить заказ
+              How to place an order
             </h2>
             <div className='space-y-6'>
               {steps.map((s) => (
@@ -72,7 +72,7 @@ export default function DeliveryPage() {
 
           <Card variant='accent'>
             <h2 className='text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-4'>
-              Где забрать заказ
+              Where to pick up your order
             </h2>
             <div className='space-y-3 text-zinc-700 dark:text-zinc-300'>
               <p className='flex items-center gap-3'>
@@ -88,7 +88,7 @@ export default function DeliveryPage() {
 
           <Card variant='warning'>
             <h2 className='text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-4'>
-              Важная информация
+              Important information
             </h2>
             <ul className='space-y-3 text-zinc-700 dark:text-zinc-300'>
               {importantInfo.map((item) => (

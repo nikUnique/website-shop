@@ -5,11 +5,11 @@ import SiteFooter from "../components/SiteFooter";
 import { SHOP_CONFIG } from "@/lib/config";
 
 const features = [
-  "Только проверенные поставщики и бренды",
-  "Удобный онлайн-каталог для быстрого заказа",
-  "Самовывоз — экономия на доставке",
-  "Прозрачные цены без скрытых наценок",
-  "Забота о клиенте — наш приоритет",
+  "Only verified suppliers and brands",
+  "Convenient online catalog for fast ordering",
+  "Store pickup - save on delivery costs",
+  "Transparent pricing with no hidden fees",
+  "Customer care is our priority",
 ] as const;
 
 export default function AboutPage() {
@@ -18,41 +18,40 @@ export default function AboutPage() {
       <SiteHeader />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <Breadcrumb links={[{ label: "Каталог", href: "/" }]} current="О нас" />
+        <Breadcrumb links={[{ label: "Catalog", href: "/" }]} current="About" />
       </div>
 
       <main className="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <SectionHeader
-          title="О нас"
+          title="About us"
           subtitle={SHOP_CONFIG.description}
         />
 
         <div className="space-y-8 text-zinc-600 dark:text-zinc-400 leading-relaxed">
           <Card>
             <p>
-              {SHOP_CONFIG.name} — это каталог качественных продуктов для тех, кто
-              ценит вкус и удобство. Вы выбираете товары на сайте, оформляете
-              заказ, а затем забираете его в нашем магазине. Мы тщательно
-              отбираем каждый товар в нашем ассортименте, чтобы вы могли
-              наслаждаться лучшими продуктами.
+              {SHOP_CONFIG.name} is a catalog of quality products for those who
+              value taste and convenience. You select items on the website, place
+              your order, then pick it up at our store. We carefully select
+              every item in our assortment so you can enjoy the best products.
             </p>
           </Card>
 
           <Card>
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-6">
-              Как это работает
+              How it works
             </h2>
             <ol className="space-y-4 list-decimal list-inside">
-              <li>Выберите нужные товары в каталоге</li>
-              <li>Добавьте их в корзину и оформите заказ</li>
-              <li>Приходите в магазин и заберите готовый заказ</li>
+              <li>Choose products from the catalog</li>
+              <li>Add them to cart and place your order</li>
+              <li>Come to the store and pick up your ready order</li>
             </ol>
           </Card>
 
           <Card variant="accent">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-6 flex items-center gap-3">
               <Sparkles className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-              Почему выбирают нас
+              Why choose us
             </h2>
             <ul className="space-y-4">
               {features.map((item) => (
@@ -66,7 +65,7 @@ export default function AboutPage() {
 
           <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-8 text-center">
             <p className="text-lg text-emerald-800 dark:text-emerald-200 font-medium">
-              Спасибо, что выбираете {SHOP_CONFIG.name}!
+              Thank you for choosing {SHOP_CONFIG.name}!
             </p>
           </div>
         </div>

@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Local Shop Catalog
+
+A lightweight, static product catalog website for local food shops — built with Next.js and deployed for free on Cloudflare Pages. Customers browse products on their phone and order in one tap via WhatsApp.
+
+---
+
+## The Problem
+
+Small shop owners who sell by phone know the drill — the same questions, over and over, every single day:
+
+> *"What do you have today?" "How much is the...?" "Do you still have...?"*
+
+Every call interrupts work. Every repeated question is time that could be spent elsewhere. And at the end of the day, orders still get mixed up because nothing was written down.
+
+This project reduces that overhead. Customers can browse the full catalog on their own time and see current prices before reaching out — cutting down the back and forth. But it doesn't eliminate phone and WhatsApp communication entirely. The owner still handles every order manually, just with a bit less friction.
+
+---
+
+## What It Does
+
+No apps to install. No accounts to create. No checkout flow. Just a clean product catalog that opens WhatsApp with a pre-filled order message — the way small shop owners already work.
+
+```
+Customer browses catalog → taps "Order via WhatsApp"
+→ WhatsApp opens: "Order from..."
+→ Owner replies, customer picks up
+```
+
+---
+
+## Limitations
+
+This is a portfolio/MVP project, not a production-ready business tool. A few honest caveats:
+
+- **No admin interface** — products are hardcoded in `products.json`. The shop owner cannot add, edit, or remove products themselves. Any catalog change requires a developer to edit the file and redeploy.
+- **Not a complete solution** — there is no inventory management, no order tracking, no payment handling, and no customer accounts. It is a static catalog with a WhatsApp shortcut, nothing more.
+- **Manual order handling** — every order still goes through WhatsApp and is fulfilled manually by the owner.
+
+If you need a fully self-managed solution, the next step would be adding an admin panel with a publish flow via the GitHub API — which was the original plan for this project.
+
+---
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | Next.js (static export) + Tailwind CSS |
+| Products | `products.json` — just a file |
+| Hosting | Cloudflare Pages |
+| Cost | €0/month |
+
+---
+
+## Features
+
+- **Category filtering** — dynamic from `products.json`, no config needed
+- **WhatsApp button** per product with pre-filled message
+- **Mobile first** — large photos and large tap targets
+- **Static export** — no server, no database, nothing to break
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/your-username/shop-catalog
+cd shop-catalog
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding Products
 
-## Learn More
+Edit `data/products.json`:
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Stuffed Peppers",
+      "category": "Ready Meals",
+      "price": 6.50,
+      "unit": "kg",
+      "description": "Homemade, stuffed with rice and minced meat",
+      "image": "/images/stuffed-peppers.jpg",
+      "available": true
+    }
+  ]
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Drop product photos into `/public/images/`. That's it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+shop-catalog/
+├── data/
+│   └── products.json        ← all products live here
+├── public/
+│   └── images/              ← product photos
+└── src/
+    ├── app/
+    │   ├── page.tsx          ← main catalog page
+    │   └── layout.tsx
+    └── components/
+        ├── ProductCard.tsx
+        ├── ProductGrid.tsx
+        ├── CategoryFilter.tsx
+        └── WhatsAppButton.tsx
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deploy to Cloudflare Pages
+
+1. Push this repo to GitHub
+2. Connect the repo in [Cloudflare Pages](https://pages.cloudflare.com)
+3. Set build command: `npm run build`
+4. Set output directory: `out`
+5. Add your environment variables in the Cloudflare dashboard (Currently, there is only one for Umami Analytics)
+6. Deploy — your site is live
+
+Every push to `master` redeploys automatically.
+
+---
+
+## Built With
+
+Next.js · Tailwind CSS · Cloudflare Pages

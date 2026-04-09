@@ -16,22 +16,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Уютная кладовая - Полуфабрикаты и Бакалея",
+  title: "Cozy Pantry - Semi-Finished Products & Groceries",
   description:
-    "Кофе, чай, лапша, паста и другие продукты для быстрой и вкусной еды. Качество и удобство в каждой упаковке.",
+    "Coffee, tea, noodles, pasta and other products for quick and delicious meals. Quality and convenience in every package.",
   openGraph: {
-    title: "Уютная кладовая - Полуфабрикаты и Бакалея",
+    title: "Cozy Pantry - Semi-Finished Products & Groceries",
     description:
-      "Кофе, чай, лапша, паста и другие продукты для быстрой и вкусной еды. Качество и удобство в каждой упаковке.",
+      "Coffee, tea, noodles, pasta and other products for quick and delicious meals. Quality and convenience in every package.",
     type: "website",
-    locale: "ru_KZ",
-    siteName: "Уютная кладовая",
+    locale: "en_US",
+    siteName: "Cozy Pantry",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Уютная кладовая - Полуфабрикаты и Бакалея",
+    title: "Cozy Pantry - Semi-Finished Products & Groceries",
     description:
-      "Кофе, чай, лапша, паста и другие продукты для быстрой и вкусной еды.",
+      "Coffee, tea, noodles, pasta and other products for quick and delicious meals.",
   },
   // themeColor: [
   //   { media: "(prefers-color-scheme: light)", color: "#ffffff" },

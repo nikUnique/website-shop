@@ -3,10 +3,10 @@ import Link from "next/link";
 import { SHOP_CONFIG } from "@/lib/config";
 
 const footerLinks = [
-  { href: "/", label: "Каталог" },
-  { href: "/about", label: "О нас" },
-  { href: "/delivery", label: "Доставка" },
-  { href: "/contacts", label: "Контакты" },
+  { href: "/", label: "Catalog" },
+  { href: "/about", label: "About" },
+  { href: "/delivery", label: "Delivery" },
+  { href: "/contacts", label: "Contacts" },
 ];
 
 export default function SiteFooter() {
@@ -24,7 +24,7 @@ export default function SiteFooter() {
 
           {/* Navigation */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Навигация</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Navigation</h3>
             <nav className="flex flex-col gap-2">
               {footerLinks.map((link) => (
                 <Link
@@ -40,7 +40,7 @@ export default function SiteFooter() {
 
           {/* Address */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Адрес</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Address</h3>
             <address className="not-italic">
               <p className="flex items-start gap-2 mb-2">
                 <MapPin className="w-4 h-4 mt-0.5 text-emerald-400 flex-shrink-0" />
@@ -51,7 +51,7 @@ export default function SiteFooter() {
 
           {/* Contact & Hours */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Контакты</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Contacts</h3>
             <div className="flex flex-col gap-3">
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
@@ -80,7 +80,7 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-zinc-800 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} {SHOP_CONFIG.name}. Все права защищены.</p>
+          <p>&copy; {new Date().getFullYear()} {SHOP_CONFIG.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
