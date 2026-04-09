@@ -91,10 +91,7 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
         </div>
 
         {/* Hover Effect Border */}
-        <div
-          className='absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-500/20 transition-colors duration-300 pointer-events-none'
-          style={{ contentVisibility: "auto" }}
-        />
+        <div className='absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-500/20 transition-colors duration-300 pointer-events-none' />
       </div>
     </Link>
   );
