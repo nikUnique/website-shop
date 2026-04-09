@@ -94,7 +94,7 @@ Edit `data/products.json`:
 }
 ```
 
-Drop product photos into `/public/images/`. That's it.
+Drop product photos into `/public/images/`. That's it. Actually, not, images won't work just like that on Cloudflare. To fix it, follow these instructions: https://commitnobug.com/blog/2025/10-october/how-to-make-nextjs-image-work-on-cloudflare.
 
 ---
 
