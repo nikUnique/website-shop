@@ -1,12 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "Arabica Whole Bean Coffee",
-    "price": 14.99,
-    "unit": "500g pack",
-    "category": "Coffee & Tea",
-    "description": "Selected 100% Arabica beans medium roast. Rich flavor with chocolate notes and light acidity.",
-    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&q=75&w=400&h=300&fit=crop",
-    "active": true
-  }
-]
+[]
