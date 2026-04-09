@@ -39,7 +39,7 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
       href={`/product/${product.id}`}
       className='block product-card'
     >
-      <div className='group relative bg-white rounded-2xl shadow-sm transition-transform duration-300 overflow-hidden border border-zinc-100'>
+      <div className='group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-transform duration-300 overflow-hidden border border-zinc-100'>
         {/* Image Container */}
         <div className='relative w-full overflow-hidden bg-zinc-50 aspect-square'>
           <Image
