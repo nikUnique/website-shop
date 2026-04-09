@@ -18,9 +18,9 @@ interface CartDrawerProps {
 }
 
 function formatPrice(price: number): string {
-  return new Intl.NumberFormat("ru-KZ", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "KZT",
+    currency: "USD",
     minimumFractionDigits: 0,
   }).format(price);
 }
@@ -31,15 +31,15 @@ function generateWhatsAppOrderText(
 ): string {
   if (items.length === 0) return "";
 
-  let text = "🛒 *Заказ с сайта " + SHOP_CONFIG.name + "*\n\n";
-  text += "📦 *Состав заказа:*\n";
+  let text = "🛒 *Order from " + SHOP_CONFIG.name + "*\n\n";
+  text += "📦 *Order contents:*\n";
 
   items.forEach((item, index) => {
-    text += `${index + 1}. ${item.name} - ${item.quantity} шт. - ${formatPrice(item.price * item.quantity)}\n`;
+    text += `${index + 1}. ${item.name} - ${item.quantity} pcs - ${formatPrice(item.price * item.quantity)}\n`;
   });
 
-  text += `\n💰 *Итого: ${formatPrice(totalPrice)}*`;
-  text += "\n\n📍 Заказ для самовывоза из магазина";
+  text += `\n💰 *Total: ${formatPrice(totalPrice)}*`;
+  text += "\n\n📍 Order for store pickup";
 
   return encodeURIComponent(text);
 }
@@ -63,7 +63,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
   const handleClearCart = () => {
     if (items.length === 0) return;
     const confirmed = window.confirm(
-      `Вы уверены, что хотите очистить корзину?\n\nБудет удалено ${items.length} товар(ов) на сумму ${formatPrice(totalPrice)}.`,
+      `Are you sure you want to clear the cart?\n\n${items.length} item(s) worth ${formatPrice(totalPrice)} will be removed.`,
     );
     if (confirmed) {
       clearCart();
@@ -90,12 +90,12 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
           {/* Header */}
           <div className='flex items-center justify-between p-6 border-b border-zinc-200 dark:border-zinc-800'>
             <h2 className='text-xl font-bold text-zinc-900 dark:text-zinc-50'>
-              Корзина ({totalCount})
+              Cart ({totalCount})
             </h2>
             <button
               onClick={onClose}
               className='p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors'
-              aria-label='Закрыть корзину'
+              aria-label='Close cart'
             >
               <X className='w-6 h-6' />
             </button>
@@ -110,7 +110,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   strokeWidth={1}
                 />
                 <p className='text-zinc-500 dark:text-zinc-400'>
-                  Корзина пуста
+                  Cart is empty
                 </p>
               </div>
             ) : (
@@ -143,7 +143,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                           updateQuantity(item.id, item.quantity - 1)
                         }
                         className='w-8 h-8 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-600 transition-colors'
-                        aria-label='Уменьшить количество'
+                        aria-label='Decrease quantity'
                       >
                         <Minus className='w-4 h-4' />
                       </button>
@@ -155,7 +155,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                           updateQuantity(item.id, item.quantity + 1)
                         }
                         className='w-8 h-8 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 hover:bg-zinc-300 dark:hover:bg-zinc-600 transition-colors'
-                        aria-label='Увеличить количество'
+                        aria-label='Increase quantity'
                       >
                         <Plus className='w-4 h-4' />
                       </button>
@@ -163,7 +163,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     <button
                       onClick={() => removeFromCart(item.id)}
                       className='p-2 text-zinc-400 hover:text-red-500 transition-colors'
-                      aria-label={`Удалить ${item.name}`}
+                      aria-label={`Remove ${item.name}`}
                     >
                       <Trash2 className='w-5 h-5' />
                     </button>
@@ -178,7 +178,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <div className='border-t border-zinc-200 dark:border-zinc-800 p-6'>
               <div className='flex items-center justify-between mb-4'>
                 <span className='text-lg font-semibold text-zinc-900 dark:text-zinc-50'>
-                  Итого:
+                  Total:
                 </span>
                 <span className='text-2xl font-bold text-zinc-900 dark:text-zinc-50'>
                   {formatPrice(totalPrice)}
@@ -191,13 +191,13 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   data-umami-event='order-button'
                 >
                   <MessageCircle className='w-5 h-5' />
-                  Заказать через WhatsApp
+                  Order via WhatsApp
                 </button>
                 <button
                   onClick={handleClearCart}
                   className='w-full py-4 rounded-2xl bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors shadow-lg border-2 border-red-700'
                 >
-                  Очистить корзину
+                  Clear cart
                 </button>
               </div>
             </div>

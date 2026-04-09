@@ -12,10 +12,10 @@ interface SiteHeaderProps {
 }
 
 const navLinks = [
-  { href: "/", label: "Каталог" },
-  { href: "/about", label: "О нас" },
-  { href: "/delivery", label: "Доставка" },
-  { href: "/contacts", label: "Контакты" },
+  { href: "/", label: "Catalog" },
+  { href: "/about", label: "About" },
+  { href: "/delivery", label: "Delivery" },
+  { href: "/contacts", label: "Contacts" },
 ];
 
 export default function SiteHeader({
@@ -58,7 +58,7 @@ export default function SiteHeader({
               <button
                 onClick={onCartClick}
                 className="relative p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-                aria-label="Корзина"
+                 aria-label="Cart"
               >
                 <ShoppingCart className="w-6 h-6" />
                 <span
@@ -74,7 +74,7 @@ export default function SiteHeader({
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              aria-label="Меню"
+               aria-label="Menu"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6" />

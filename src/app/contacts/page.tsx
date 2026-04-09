@@ -15,13 +15,13 @@ interface ContactCard {
 const contactCards: ContactCard[] = [
   {
     icon: MapPin,
-    title: "Адрес",
+    title: "Address",
     content: SHOP_CONFIG.address,
     color: "emerald",
   },
   {
     icon: Phone,
-    title: "Телефон",
+    title: "Phone",
     content: SHOP_CONFIG.phone,
     href: `tel:${SHOP_CONFIG.phone}`,
     color: "blue",
@@ -35,11 +35,11 @@ const contactCards: ContactCard[] = [
   },
   {
     icon: Clock,
-    title: "Часы работы",
+    title: "Working hours",
     content: (
       <>
-        <p>Пн–Пт: 9:00 – 20:00</p>
-        <p>Сб–Вс: 10:00 – 18:00</p>
+        <p>Mon–Fri: 9:00 – 20:00</p>
+        <p>Sat–Sun: 10:00 – 18:00</p>
       </>
     ),
     color: "purple",
@@ -62,15 +62,15 @@ export default function ContactsPage() {
 
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4'>
         <Breadcrumb
-          links={[{ label: "Каталог", href: "/" }]}
-          current='Контакты'
+          links={[{ label: "Catalog", href: "/" }]}
+          current='Contacts'
         />
       </div>
 
       <main className='flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-16'>
         <SectionHeader
-          title='Контакты'
-          subtitle='Свяжитесь с нами любым удобным способом'
+          title='Contacts'
+          subtitle='Get in touch with us in any convenient way'
         />
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>

@@ -23,11 +23,11 @@ export default function Error({
         </div>
         <div>
           <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-2">
-            Что-то пошло не так
+            Something went wrong
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400 max-w-md">
-            Произошла ошибка при загрузке страницы. Попробуйте обновить страницу
-            или вернитесь на главную.
+            An error occurred while loading the page. Try refreshing the page
+            or go back to homepage.
           </p>
         </div>
         <div className="flex gap-3">
@@ -36,14 +36,14 @@ export default function Error({
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition-colors"
           >
             <RefreshCw className="w-4 h-4" />
-            Попробовать снова
+            Try again
           </button>
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
           >
             <Home className="w-4 h-4" />
-            На главную
+            Go home
           </Link>
         </div>
       </div>

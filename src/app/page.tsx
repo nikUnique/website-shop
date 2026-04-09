@@ -14,18 +14,18 @@ const PRODUCTS_PER_PAGE = 8;
 
 export default function Home() {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("Все");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
   const categories = useMemo(() => {
     const all = productsData.map((p: Product) => p.category);
     const unique = [...new Set(all)];
-    return ["Все", ...unique];
+    return ["All", ...unique];
   }, []);
 
   const activeProducts = useMemo(() => {
     const filtered = productsData.filter((p: Product) => p.active) as Product[];
-    if (selectedCategory === "Все") return filtered;
+    if (selectedCategory === "All") return filtered;
     return filtered.filter((p: Product) => p.category === selectedCategory);
   }, [selectedCategory]);
 
@@ -47,11 +47,11 @@ export default function Home() {
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-10 text-center">
           <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
-            Полуфабрикаты и Бакалея
+            Semi-Finished Products & Groceries
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Кофе, чай, лапша, паста и другие продукты для быстрой и вкусной еды.
-            Качество и удобство в каждой упаковке.
+            Coffee, tea, noodles, pasta and other products for quick and delicious meals.
+            Quality and convenience in every package.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
           }}
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {paginatedProducts.map((product: Product, index: number) => (
             <ProductCard
               key={product.id}
@@ -82,7 +82,7 @@ export default function Home() {
               className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex items-center gap-1"
             >
               <ChevronLeft className="w-4 h-4" />
-              Назад
+              Back
             </button>
 
             {pages.map((page: number) => (
@@ -104,7 +104,7 @@ export default function Home() {
               disabled={currentPage === totalPages}
               className="px-3 py-2 text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors flex items-center gap-1"
             >
-              Вперед
+              Next
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
               strokeWidth={1}
             />
             <p className="text-zinc-500 dark:text-zinc-400">
-              Продукты не найдены
+              No products found
             </p>
           </div>
         )}
