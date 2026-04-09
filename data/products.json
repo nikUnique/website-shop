@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Arabica Whole Bean Coffee",
+    "price": 14.99,
+    "unit": "500g pack",
+    "category": "Coffee & Tea",
+    "description": "Selected 100% Arabica beans medium roast. Rich flavor with chocolate notes and light acidity.",
+    "image": "../public/images/Arabica.jpeg",
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Wheat Ramen Noodles",
+    "price": 4.99,
+    "unit": "300g pack",
+    "category": "Noodles & Pasta",
+    "description": "Traditional Japanese ramen noodles. Perfect for making authentic broth with egg and vegetables.",
+    "image": "../public/images/Wheat-ramen.jpeg",
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Matcha Green Tea",
+    "price": 19.99,
+    "unit": "100g pack",
+    "category": "Coffee & Tea",
+    "description": "Japanese ceremonial grade matcha powder. Rich umami flavor and natural energy.",
+    "image": "../public/images/Matcha.jpeg",
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Fettuccine Pasta",
+    "price": 3.99,
+    "unit": "500g pack",
+    "category": "Noodles & Pasta",
+    "description": "Italian pasta from durum wheat. Perfect for creamy sauces and classic dishes.",
+    "image": "../public/images/Fettuccine.jpeg",
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Espresso Ground Coffee",
+    "price": 11.99,
+    "unit": "250g pack",
+    "category": "Coffee & Tea",
+    "description": "Classic espresso blend fine grind. Strong rich flavor with thick crema.",
+    "image": "../public/images/Espresso.jpeg",
+    "active": true
+  },
+  {
+    "id": 6,
+    "name": "Udon Noodles",
+    "price": 4.49,
+    "unit": "400g pack",
+    "category": "Noodles & Pasta",
+    "description": "Thick wheat noodles for Japanese soups and stir-fries. Soft texture and neutral flavor.",
+    "image": "../public/images/Noodles.jpeg",
+    "active": true
+  },
+  {
+    "id": 7,
+    "name": "Milk Oolong Tea",
+    "price": 13.99,
+    "unit": "100g pack",
+    "category": "Coffee & Tea",
+    "description": "Taiwanese oolong with delicate creamy aroma. Soft flavor with floral notes.",
+    "image": "../public/images/Oolong-tea.jpeg",
+    "active": true
+  },
+  {
+    "id": 8,
+    "name": "Classic Spaghetti",
+    "price": 3.49,
+    "unit": "500g pack",
+    "category": "Noodles & Pasta",
+    "description": "Traditional Italian spaghetti from durum wheat. Holds shape perfectly and pairs with any sauce.",
+    "image": "../public/images/Spagetti.jpeg",
+    "active": true
+  }
+]
