@@ -46,9 +46,8 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
             src={product.image}
             alt={product.name}
             fill
-            priority={priority}
-            sizes='(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw'
-            className='object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform'
+            sizes='25vw'
+            className='object-cover'
           />
 
           {/* Category Badge */}
