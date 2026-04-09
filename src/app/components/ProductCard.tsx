@@ -52,7 +52,7 @@ export default function ProductCard({ product, priority }: ProductCardProps) {
 
           {/* Category Badge */}
           <div className='absolute top-2 left-2 sm:top-3 sm:left-3'>
-            <span className='inline-flex items-center rounded-full bg-white/90 backdrop-blur-sm px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-medium text-zinc-700 shadow-sm'>
+            <span className='inline-flex items-center rounded-full bg-white/90 px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-medium text-zinc-700 shadow-sm'>
               {product.category}
             </span>
           </div>
